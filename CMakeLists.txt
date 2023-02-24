@@ -4,7 +4,7 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 cmake_minimum_required(VERSION 3.20)
 
 # 工具链设置
-set(TOOLPATH  D:/0wch/toolchain/RISCVEmbeddedGCC/bin/riscv-none-embed-)
+set(TOOLPATH "D:/0wch/toolchain/RISCVEmbeddedGCC/bin/riscv-none-embed-" CACHE STRING "RISC-V toolchain path")
 
 if (WIN32)
 	MESSAGE(STATUS "Now is windows!")
