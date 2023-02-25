@@ -16,10 +16,10 @@ jobs:
           submodules: recursive
           
       - name: Build With Docker
-        run: docker run -t --rm -v $PWD:/project registry.cn-shenzhen.aliyuncs.com/liux-pro/wch-build
+        run: docker run -t --rm -v $PWD:/project ghcr.io/liux-pro/wch-build:latest
         
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ch582-ninja.hex
-          path: ./build/ch582-ninja.hex
+          name: hex file
+          path: ./build/*.hex
